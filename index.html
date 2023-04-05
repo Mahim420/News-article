@@ -7,60 +7,101 @@
     <title>Article</title>
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
 
+    <!-- FONT-ICON LINK -->
+    <script
+      src="https://kit.fontawesome.com/15f18f9831.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FONT-ICON LINK -->
+
     <!-- BOOTSTRAP LINK CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"/>
-
-      <link rel="stylesheet" href="Styles Files/custom.css">
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Styles Files/custom.css" />
     <!-- BOOTSTRAP LINK CSS-->
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid nav-color">
-             <img class="img-fluid" src="images/icon.png" alt="">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+      <nav class="navbar nav-color">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/icon.png" alt="Bootstrap" height="40" />
+          </a>
+          <div class="d-flex align-items-center">
+            <p class="me-5">News</p>
+            <p>Blog</p>
+            <p class="ms-3">
+              <img
+                class="img-fluid rounded-circle"
+                height="30"
+                width="30"
+                src="images/Mahim-2.png"
+                alt=""/>
+            </p>
+          </div>
+        </div>
+      </nav>
+      <hr class="border border-danger border-2" />
+      <section class="mt-4">
+        <div id="title-container"></div>
+        <div class="mt-4 p-4">
+          <div
+            class="extra-white border border-success p-2"
+            style="height: 50px">
+            Total Data:<span class="ms-2" id="notification"></span>
+          </div>
+        </div>
+        <div></div>
+      </section>
+    </header>
+    <main>
+      <section class="container">
+        <article id="article-container"></article>
+      </section>
+      <div id="loaderSection" class="d-none">
+        <div
+          style="height: 300px"
+          class="d-flex justify-content-center align-items-center text-danger">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div id="alert" class="mt-4 d-none">
+        <h2 class="text-warning fw-bold text-center">No Data Found</h2>
+      </div>
+      <section>
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div id="modal-body" class="modal-body"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
-          </nav>
-    </header>
-    
-    
-    
-    
-    
+          </div>
+        
+      </section>
+    </main>
+
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- BOOTSTRAP JS -->
+    <!-- OWN JS -->
+    <script src="Java Sctipt/news.js"></script>
+    <!-- OWN JS -->
   </body>
 </html>

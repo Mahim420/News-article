@@ -10,4 +10,19 @@ body{
 .nav-color{
     background-color: lightgoldenrodyellow;
 }
+
+.star{
+    color: gold;
+}
 /* ALL CUSTOM COLOR */
+
+/* HOVER EFFECT */
+.hover:hover{
+  color: blue;
+  cursor: pointer;
+}
+
+.extra-white{
+    background-color: #FFFFFF;
+}
+/* HOVER EFFECT */
