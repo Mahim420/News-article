@@ -42,6 +42,7 @@ const displayData = (allData) =>{
     toggleLoader(false)
     allData.forEach(data =>{
         // console.log(data)
+        
         const card = document.createElement('div');
         card.classList.add('card', 'mb-3');
         card.innerHTML = `
@@ -52,21 +53,22 @@ const displayData = (allData) =>{
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title">${data.author.name}</h5>
-                <p class="card-text overflow-hidden">
-                ${data.details.slice(0,400)}
+                <p class="card-text overflow-hidden overFlow">
+                ${data.details}
                 </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="ms-2 d-flex">
                      <img style="height: 40px" class="img-fluid rounded-circle"src="${data.author.img}" alt="">
-                     <h6>Jane Cooper <br> ${data.author.published_date}</h6>
+                     <h6 class="ms-2">Jane Cooper <br>${data.author.published_date}
+                     </h6>
                     </div>
                     <p><i class="fa-solid fa-eye me-3"></i>${data.total_view}</p>
                     <p>
-                    <i class="fa-solid fa-star star"></i>
-                    <i class="fa-solid fa-star star"></i>
-                    <i class="fa-solid fa-star star"></i>
-                    <i class="fa-solid fa-star star"></i>
-                    <i class="fa-solid fa-star star"></i>
+                       <i class="fa-solid fa-star star"></i>
+                       <i class="fa-solid fa-star star"></i>
+                       <i class="fa-solid fa-star star"></i>
+                       <i class="fa-solid fa-star star"></i>
+                       <i class="fa-solid fa-star star"></i>
                     </p>
                     <p onclick="loadDetailes('${data._id}')"><i type="button" class="fa-solid fa-arrow-right fw-bold fs-4 text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></p>
                 </div>
